@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="624,1077" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="624,1356" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -87,21 +87,22 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="548,1012" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="548,1291" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: signup.css - movie-website-front-end - Visual Studio Code" sap:VirtualizedContainerService.HintSize="486,901" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="e8085a09-5a4e-4b4e-a235-2fbb7ea9002b" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: signup.css - movie-website-front-end - Visual Studio Code" sap:VirtualizedContainerService.HintSize="486,1180" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="e8085a09-5a4e-4b4e-a235-2fbb7ea9002b" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,610" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,889" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="ImagePath" />
+              <Variable x:TypeArguments="x:String" Name="Htmlcode" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -111,6 +112,11 @@
             <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Enter path of Image" Title="WizardPro">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[ImagePath]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="388,239" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Enter Html Code" Title="WizardPro">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[Htmlcode]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'grouping'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e8085a09-5a4e-4b4e-a235-2fbb7ea9002b" Text=" &#xD;&#xA;#btn{&#xD;&#xA;    border: none;&#xD;&#xA;    background-color: rgb(0, 110, 255);&#xD;&#xA;    border-radius: 20px;&#xD;&#xA;    padding: 10px;&#xD;&#xA;    color: white;&#xD;&#xA;    width: 120px;&#xD;&#xA;    margin-top: 50px;&#xD;&#xA;    margin-left: 50%;&#xD;&#xA;}&#xD;&#xA;#btn:hover{&#xD;&#xA;    background-color: #ffffff;&#xD;&#xA;    color: rgb(0, 110, 255)&#xD;&#xA;}&#xD;&#xA;.signup{&#xD;&#xA;    width: 400px;&#xD;&#xA;    height: 528px;&#xD;&#xA;    background-color: #ffffff;&#xD;&#xA;    border-radius: 10px;&#xD;&#xA;    &#xD;&#xA;}&#xD;&#xA;.userName{&#xD;&#xA;    padding-right: 11%;&#xD;&#xA;    &#xD;&#xA;    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;&#xD;&#xA;}&#xD;&#xA;.email{&#xD;&#xA;    padding-right: 4%; &#xD;&#xA;    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;&#xD;&#xA;}&#xD;&#xA;.password{&#xD;&#xA;    padding-right: 12%;&#xD;&#xA;    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;&#xD;&#xA;}&#xD;&#xA;.em{&#xD;&#xA;    padding-top: 30px;&#xD;&#xA;}&#xD;&#xA;.un{&#xD;&#xA;    padding-top:40px;&#xD;&#xA;}&#xD;&#xA;.pass{&#xD;&#xA;    padding-top: 40px;&#xD;&#xA;}&#xD;&#xA;h1{&#xD;&#xA;    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;p{&#xD;&#xA;    margin-left: 20%;&#xD;&#xA;}&#xD;&#xA;.phonenumber{&#xD;&#xA;    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;&#xD;&#xA;    padding-right: 3%;&#xD;&#xA;}&#xD;&#xA;body{&#xD;&#xA;    background-color: #1f1d1d;&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;.main{&#xD;&#xA;    border-radius: 10px;&#xD;&#xA;    background-color: rgb(255, 255, 255);&#xD;&#xA;    width: 800px;&#xD;&#xA;    margin: auto;&#xD;&#xA;    margin-top: 5%;&#xD;&#xA;    height: 550px;&#xD;&#xA;    position: relative;&#xD;&#xA;}&#xD;&#xA;h1{&#xD;&#xA;    padding-top: 30px;&#xD;&#xA;}&#xD;&#xA;h6{&#xD;&#xA;    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;&#xD;&#xA;}&#xD;&#xA;.img{&#xD;&#xA;    height:550px;&#xD;&#xA;    width:380px;&#xD;&#xA;    border-radius: 10px;&#xD;&#xA;&#xD;&#xA;    content:url(https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000);​&#xD;&#xA;}&#xD;&#xA;.float-main{ &#xD;&#xA;    float: left ; &#xD;&#xA;    width : 50%; &#xD;&#xA;}&#xD;&#xA;.pd{&#xD;&#xA;    border-style: none;&#xD;&#xA;    outline: none;&#xD;&#xA;}" Version="V3">
