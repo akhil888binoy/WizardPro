@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WizardPro</title>
+    <style>
+      body {
+        background: rgb(63,94,251);
+        background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(0,0,0,1) 100%);
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      input[type="text"] {
+        padding: 20px;
+        border: none;
+        border-radius: 0;
+        font-size: 16px;
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input[type="text"]::placeholder {
+        color: #aaa;
+      }
+
+      input[type="file"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 30%;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 20px;
+        color: #333;
+        display: inline-block;
+        text-align: left;
+      }
+
+      input[type="file"]::placeholder {
+        color: #aaa;
+      }
+
+      input[type="submit"] {
+        background-color: #0135c4;
+        color: white;
+        padding: 15px 32px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: block;
+        margin: 0 auto;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #001f75;
+      }
+    </style>
+  </head>
+  <body>
+    <label  style="font-family: 'Times New Roman', Times, serif; font-size: 200px;">WizardPro</label>
+    <br><br>
+    <label for="myimage" style="font-family: 'Arial', Times, serif;font-size: 20px;"">Upload a JPEG image:</label>
+    <input type="file" id="myimage" name="myimage" accept="image/jpeg">
+    <br><br>
+    <input type="submit" value="Submit">
+  </body>
+</html>
